@@ -1,0 +1,160 @@
+/* variables */
+:root {
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --lcyan:rgba(7, 255, 247, 0.616);
+    --dblue: hsl(217, 54%, 11%);
+    --dblue1: hsl(216, 50%, 16%);
+    --dblue2: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --font: "Outfit", sans-serif;
+}
+
+/*General*/
+*{ 
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    font-family: var(--font);
+    font-size: 1.9rem;
+    font-weight: 200;
+    text-align: center;
+    background-color: var(--dblue);
+    color: var(--blue);
+}
+.container {
+    margin: 5rem auto;
+}
+h1{
+    text-align: center;
+    display: none;
+}
+
+/*Cards*/
+.card {
+    background-color: var(--dblue1);
+    max-width: 95%;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+@media only screen and (min-width:960px) {
+    .card {
+        max-width: 20%;
+    }
+}
+@media only screen and (max-width:959px) {
+    .card {
+        max-width: 45%;
+    }
+}
+@media only screen and (max-width:600px) {
+    .card {
+        max-width: 85%;
+    }
+}
+.card_img{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.image {
+    opacity: 1;
+    display: block;
+    height: auto;
+    width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 1rem;    
+}
+.image_overlay {
+    background-color: var(--lcyan);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    inset: 0;
+    transition: all 0.4s ease-in-out 0s;   
+    border-radius: 1rem; 
+}
+.image_overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card_img:hover .image_overlay{
+    opacity: 1;
+}
+.card-content {
+    text-align: left;
+}
+.card-content h2 {
+    color: var(--white);
+    transition: all 0.4s ease-in-out 0s;    
+}
+.card-content h2:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.specs {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+.specs .value {
+    color: var(--cyan);
+}
+.specs .value::before{
+    content: url("../images/icon-ethereum.svg");
+    margin-right: 1rem;
+}
+.specs .time::before{
+    content: url("../images/icon-clock.svg");
+    margin-right: 1rem;
+}
+.card-author {
+    display: flex;
+    align-items: center;
+    border-top: .1rem solid var(--blue);
+}
+.card-author img {
+    border-radius: 50%;
+    border: .2rem solid var(--white);
+    height: 4rem;
+    margin-right: 1.3rem;
+}
+.card-author span {
+    color: var(--white);
+    transition: all 0.4s ease-in-out 0s;    
+}
+.card-author span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+    transition: ease all 1s;
+}
+
+/*Footer*/
+footer {
+    padding: 3rem 0;
+}
+footer a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--cyan);
+    border-bottom: 0.1rem solid var(--cyan);
+    transition: ease-in-out 1s;
+}
+footer a:hover{
+    color: var(--blue);
+}
+footer a::before {
+    content: "→ ";
+}
+footer a::after {
+    content: " ←";
+}
