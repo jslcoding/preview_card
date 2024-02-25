@@ -23,8 +23,8 @@ Users should be able to:
 ![](./images/screenchot.png)
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/jslcoding/preview_card)
+- Live Site URL: [https://jslcoding.github.io/preview_card/)
 
 ### Built with
 - Semantic HTML5 markup
